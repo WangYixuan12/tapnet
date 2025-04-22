@@ -711,7 +711,7 @@ class TAPIR(hk.Module):
       resize_im_shape.append(video_resize[0, 0, :, :, 0:0])
 
     return FeatureGrids(
-        tuple(feature_grid), tuple(hires_feats), tuple(resize_im_shape)
+        list(feature_grid), list(hires_feats), list(resize_im_shape)
     )
 
   def get_query_features(
